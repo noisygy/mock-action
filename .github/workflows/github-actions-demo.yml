@@ -28,10 +28,11 @@ jobs:
       env:
         DETECT_EXCLUDED_DETECTOR_TYPES: GIT
       with:
-        include_diagnostics: false
+        # include_diagnostic: false
         blackduck_url: ${{ secrets.BLACKDUCK_URL }}
         blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN }}
         blackduck_scan_full: false
-        blackduck_automation_prcomment: false
+        # blackduck_automation_prcomment: false
         github_token: ${{ secrets.GITHUB_TOKEN }}
-
+    - name: mock-build
+      run: echo Should not get here
