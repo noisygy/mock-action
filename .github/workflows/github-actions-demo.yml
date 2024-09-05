@@ -29,6 +29,7 @@ jobs:
         DETECT_EXCLUDED_DETECTOR_TYPES: GIT
       with:
         # include_diagnostic: false
+        blackduck_scan_failure_severities: 'CRITICAL'
         blackduck_url: ${{ secrets.BLACKDUCK_URL }}
         blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN }}
         blackduck_scan_full: false
